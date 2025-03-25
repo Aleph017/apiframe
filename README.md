@@ -19,7 +19,6 @@ A script that fetches and displays current Warframe cycles, Void Trader status, 
   ```
   git clone https://github.com/Aleph017/apiframe.git
   cd apiframe
-
   ```
 3. Make the script executable and rename it
   ```
