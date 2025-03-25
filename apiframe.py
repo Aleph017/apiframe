@@ -10,6 +10,8 @@ colors = {
     "clear" : "\x1b[0m"
 }
 
+yellow = "\x1b[0;34;33m"
+
 def getFactionColor(faction):
     return colors.get(faction, colors["clear"])
 
@@ -55,6 +57,6 @@ for invasion in invasions:
         defenderColor = getFactionColor(defender)
         if not invasion['vsInfestation']:
             attackReward = invasion['attacker']['reward']['asString']
-            print(f"\t{node}:\n\t\t{attackerColor}{attacker}\x1b[0m ({attackReward}),\n\t\t{defenderColor}{defender}\x1b[0m ({defenderReward}),\n\t\t{eta} left;\n")
+            print(f"\t{node}:\n\t\t{attackerColor}{attacker}\x1b[0m:\n\t\t- Reward: {yellow}{attackReward}\x1b[0m,\n\t\t{defenderColor}{defender}:\x1b[0m\n\t\t- Reward: {yellow}{defenderReward}\x1b[0m,\n\t\t{eta} left;\n")
         else:
-            print(f"\t{node}:\n\t\t{attackerColor}{attacker}\x1b[0m,\n\t\t{defenderColor}{defender}\x1b[0m ({defenderReward}),\n\t\t{eta} left;\n")
+            print(f"\t{node}:\n\t\t{attackerColor}{attacker}\x1b[0m,\n\t\t{defenderColor}{defender}\x1b[0m:\n\t\t- Reward: {yellow}{defenderReward}\x1b[0m,\n\t\t{eta} left;\n")
