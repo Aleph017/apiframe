@@ -19,7 +19,7 @@ request = requests.get(f"https://api.warframestat.us/pc/")
 
 if request.status_code != 200:
     print(f"Failed getting info from Warframe API: {request.status_code}", file=sys.stderr)
-    exit()
+    sys.exit(1)
 
 response = request.json()
 
