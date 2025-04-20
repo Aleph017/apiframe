@@ -11,13 +11,13 @@ colors = {
 }
 
 def getFactionColor(faction):
-    
     return colors.get(faction, colors["clear"])
 
 def NGEcheck(string):
     return "Negative Time Error" if '-' in string else string
 
 def requestInfo():
+    print("Fetching info...", end="\r")
     request = requests.get("https://api.warframestat.us/pc/")
     if request.status_code != 200:
         print(f"Failed to get info from Warframestat API: {request.status_code}", 
