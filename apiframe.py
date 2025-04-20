@@ -100,7 +100,7 @@ def main(args):
     for arg in args:
         if arg == "-c" or arg == "--colorless":
             isColorful = False
-        if arg == "-h" or "--help":
+        if arg == "-h" or arg == "--help":
             printHelp()
 
     response = requestInfo()
